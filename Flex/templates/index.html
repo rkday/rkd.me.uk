@@ -6,7 +6,7 @@
   <header>
     <h2><a href="{{ SITEURL }}/{{ article.url }}#{{ article.slug }}">{{ article.title }}</a></h2>
     <p>
-      Posted on {{ article.locale_date }} in <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+      Posted on {{ article.locale_date }}</a>
       {% if article.tags %}
       &#8226; Tagged with
       {% for tag in article.tags %}
