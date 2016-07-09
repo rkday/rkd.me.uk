@@ -22,7 +22,9 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Programming in the 21st Century', 'http://prog21.dadgum.com/'),
+LINKS = (('rachelbythebay.com', 'https://rachelbythebay.com/w/'),
+         ('Julia Evans', 'http://jvns.ca/'),
+         ('Programming in the 21st Century', 'http://prog21.dadgum.com/'),
          ('matt.might.net', 'http://matt.might.net/articles/'),
          ('Rands in Repose', 'http://randsinrepose.com/'),
          ('Coding Horror', 'http://blog.codinghorror.com/'),
