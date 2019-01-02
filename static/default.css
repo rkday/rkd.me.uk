@@ -250,7 +250,7 @@ hr
 #header-wrapper
 {
 	overflow: hidden;
-	height: 600px;
+	height: 300px;
 	background: url('images/header.jpg') no-repeat top center;
 	background-size: 100%;
 }
