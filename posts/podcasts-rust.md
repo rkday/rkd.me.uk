@@ -1,8 +1,9 @@
-Title: Podcasts on the command-line, in Rust
-Date: 2018-04-08 22:10
-Category: None
-Author: Rob Day
-Slug: rust-podcasts
+---
+layout: default.liquid
+title: Podcasts on the command-line, in Rust
+published_date: 2018-04-08 22:10:00 +0100
+slug: rust-podcasts
+---
 
 I've been listening to more podcasts recently on my commute and at the gym, including [New Rustacean](https://newrustacean.com/) and [AB Testing](http://www.angryweasel.com/ABTesting/). I currently use [Clementine](https://www.clementine-player.org/) to manage my podcasts, but it's not perfect - the "Copy to device" menu option was greyed out this morning, so I had to copy podcast episodes on manually.
 

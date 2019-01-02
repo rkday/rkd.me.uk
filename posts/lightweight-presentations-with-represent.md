@@ -1,8 +1,9 @@
-Title: Lightweight presentations with represent
-Date: 2016-07-09 16:15
-Category: None
-Author: Rob Day
-Slug: lightweight-presentations-with-represent
+---
+layout: default.liquid
+title: Lightweight presentations with represent
+published_date: 2016-07-09 16:15:00 +0100
+slug: lightweight-presentations-with-represent
+---
 
 I've been trying to find a good, lightweight way to write technical presentations for a while now. Specifically, I'm looking for one that avoids some of the common problems with Powerpoint:
 

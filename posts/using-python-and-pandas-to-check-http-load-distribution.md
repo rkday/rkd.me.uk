@@ -1,8 +1,9 @@
-Title: Using Python and Pandas to check HTTP load distribution
-Date: 2016-05-30 09:36
-Category: None
-Author: Rob Day
-Slug: using-python-and-pandas-to-check-http-load-distribution
+---
+layout: default.liquid
+title: Using Python and Pandas to check HTTP load distribution
+published_date: 2016-05-30 09:36:00 +0100
+slug: using-python-and-pandas-to-check-http-load-distribution
+---
 
 Since writing [my previous post](/is-my-load-evenly-distributed.html) on using standard Unix shell tools to analyse a HTTP access log, I've been thinking about how to do this with more standard data analysis tools. Using [Pandas](http://pandas.pydata.org/) and [Matplotlib](http://matplotlib.org/), which are the main Python data libraries, you can get a bit more fine-grained control, and view the results graphically.
 

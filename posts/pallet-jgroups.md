@@ -1,9 +1,9 @@
-Title: Reconfiguring an AWS Elastic IP with Pallet
-Date: 2013-12-08 21:50
-Category: Code
-Tags: clojure, devops
-Slug: pallet-elastic-ip
-Author: Rob Day
+---
+layout: default.liquid
+title: Reconfiguring an AWS Elastic IP with Pallet
+published_date: 2013-12-08 21:50:00 +0100
+slug: pallet-elastic-ip
+---
 
 I was recently playing around with Pallet (as an offshoot of some of the DevOps-style cloud provisioning work I do on [Project Clearwater](http://www.projectclearwater.org)), and had a bit of trouble getting from Pallet to the underlying jClouds API (I was using 1.5.5).
 

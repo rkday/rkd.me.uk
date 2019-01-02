@@ -2,6 +2,8 @@ ignore:
   - TODO
   - buildspec.yml
   - old_content
+  - port.py
+  - port.sh
 
 site:
   title: cobalt blog

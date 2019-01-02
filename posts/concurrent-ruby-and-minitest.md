@@ -1,8 +1,9 @@
-Title: Concurrent-ruby and Minitest
-Date: 2014-12-07 21:22
-Category: Code
-Author: Rob Day
-Slug: concurrent-ruby-and-minitest
+---
+layout: default.liquid
+title: Concurrent-ruby and Minitest
+published_date: 2014-12-07 21:22:00 +0100
+slug: concurrent-ruby-and-minitest
+---
 
 I spent some time earlier today debugging an interesting interaction in Ruby between minitest/autorun and concurrent-ruby, and since none of my searches on it turned up quite the right answer, figured I'd write up my notes.
 

@@ -1,8 +1,9 @@
-Title: Intermediate Vim: Sessions
-Date: 2016-03-27 11:00
-Category: None
-Author: Rob Day
-Slug: intermediate-vim-sessions
+---
+layout: default.liquid
+title: Intermediate Vim - Sessions
+published_date: 2016-03-27 11:00:00 +0100
+slug: intermediate-vim-sessions
+---
 
 I've been trying to improve my skill with Vim recently - I'm definitely nowhere near an expert, but I've been trying to move beyond just the basic "read files/write files/use regexps/install plugins" to understand and use more of Vim's built-in features. I'm planning to write blog posts on a couple of things, including macros, folding and ctags, but the first thing I've dug into and found useful are sessions.
 

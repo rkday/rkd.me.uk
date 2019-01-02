@@ -1,8 +1,9 @@
-Title: Four cool things from KamailioWorld 2014
-Date: 2014-04-15 20:50
-Category: VoIP
-Slug: kamailio2014
-Author: Rob Day
+---
+layout: default.liquid
+title: Four cool things from KamailioWorld 2014
+published_date: 2014-04-15 20:50:00 +0100
+slug: kamailio2014
+---
 
 A week ago I got back from KamailioWorld in Berlin, where I was giving a talk on performance testing. I really enjoyed myself - it's a nicely-run conference, and it's useful to talk to the broader open-source community and find out about new trends (WebRTC, stronger cryptography) and tools.
 

@@ -1,8 +1,9 @@
-Title: Clang vs. GCC - code coverage checking
-Date: 2016-04-02 15:37
-Category: None
-Author: Rob Day
-Slug: clang-vs-gcc-coverage
+---
+layout: default.liquid
+title: Clang vs. GCC - code coverage checking
+published_date: 2016-04-02 15:37:00 +0100
+slug: clang-vs-gcc-coverage
+---
 
 Recently, I've been compiling some of the codebases I work on under Clang 3.8 instead of GCC 4.8, to take advantage of better compiler warnings and faster compilation speed (I've seen a 33% speedup, though I haven't tested this rigorously). Today, I got to grips with llvm-cov-3.8, and checked the coverage of my Clang-compiled test suite - and saw coverage failures, on a test suite I know has 100% coverage when compiled under GCC. Some of the uncovered lines were very odd - a closing brace, for example. What's going on?
 

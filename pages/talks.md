@@ -1,4 +1,7 @@
-Title: Talks
+---
+title: Talks
+layout: default.liquid
+---
 
 ### February 2016, FOSDEM (SDN/NFV devroom): Clearwater: Open-Source IMS Core for the Cloud
 

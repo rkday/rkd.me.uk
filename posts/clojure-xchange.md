@@ -1,9 +1,9 @@
-Title: Notes from the December 2013 Clojure eXchange
-Date: 2014-01-07 22:10:07
-Category: Code
-Tags: clojure
-Slug: clojure-xchange-2013
-Author: Rob Day
+---
+layout: default.liquid
+title: Notes from the December 2013 Clojure eXchange
+published_date: 2014-01-07 22:10:07 +0100
+slug: clojure-xchange-2013
+---
 
 Last month, I went to the Clojure eXchange in London (run by SkillsMatter). I've been meaning since then to write up my notes from the most interesting talks, so here goes. You can see all these talks (and others I've not mentioned) at http://skillsmatter.com/event/java-jee/clojure-exchange-2013.
 

@@ -1,8 +1,9 @@
-Title: C++ static analysis
-Date: 2016-04-10 11:54
-Category: None
-Author: Rob Day
-Slug: cpp-static-analysis
+---
+layout: default.liquid
+title: C++ static analysis
+published_date: 2016-04-10 11:54:00 +0100
+slug: cpp-static-analysis
+---
 
 Recently, I've been looking at static analysis for some of my C++ codebases - tools that will warn about possible errors in my code without needing to run the code. I've been looking, in particular, for things that I can add as a build step - that is, cases where I can trust the static analyser to be right and fail the build if it fails, rather than fuzzier checks where you need human judgement to double-check that the analysis makes sense.
 
@@ -31,7 +32,7 @@ Running it over my codebase gave me:
 
 I did see instances where it failed to parse modern C++ correctly - for example, I saw it get confused by C++ map initialization syntax - it parsed:
 
-`std::map<std::string, uint32_t> {{"FOO" + std::to_string(x), 1}};`
+`std::map<std::string, uint32_t> \{\{"FOO" + std::to_string(x), 1\}\};`
 
 and reported "(warning) Redundant code: Found a statement that begins with string constant."
 

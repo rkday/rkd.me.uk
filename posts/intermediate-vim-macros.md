@@ -1,10 +1,11 @@
-Title: Intermediate Vim: Macros
-Date: 2016-04-24 09:58
-Category: None
-Author: Rob Day
-Slug: intermediate-vim-macros
+---
+layout: default.liquid
+title: Intermediate Vim - Macros
+published_date: 2016-04-24 09:58:00 +0100
+slug: intermediate-vim-macros
+---
 
-_(I previously posted on another Vim feature, sessions, which you can find [here](/intermediate-vim-sessions.html))._
+_(I previously posted on another Vim feature, sessions, which you can find [here](/intermediate-vim-sessions.html))_.
 
 Macros have been the bane of my life in Vim for a little while. I didn't really know what they did, so I never used them, but sometimes I'd mistype `:q` as `q` and Vim would print 'recording' at the bottom and I'd panic slightly. (If you didn't know that that 'recording' message was part of the macro feature, well, now you do!). 
 

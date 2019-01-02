@@ -1,8 +1,9 @@
-Title: Is my load evenly distributed?
-Date: 2016-04-16 10:59
-Category: None
-Author: Rob Day
-Slug: is-my-load-evenly-distributed
+---
+layout: default.liquid
+title: Is my load evenly distributed?
+published_date: 2016-04-16 10:59:00 +0100
+slug: is-my-load-evenly-distributed
+---
 
 I recently had a log file full of timestamped data, and I needed to analyse it to see how evenly distributed it was. Turns out this is surprisingly easy with standard GNU command-line tools.
 

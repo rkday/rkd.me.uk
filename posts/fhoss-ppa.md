@@ -1,9 +1,9 @@
-Title: New PPA for OpenIMSCore FHoSS
-Date: 2014-07-06 16:10:07
-Category: VoIP
-Tags: ims,hss,packaging
-Slug: fhoss-ppa
-Author: Rob Day
+---
+layout: default.liquid
+title: New PPA for OpenIMSCore FHoSS
+published_date: 2014-07-06 16:10:07 +0100
+slug: fhoss-ppa
+---
 
 A while back, I got in touch with the Fraunhofer FOKUS team behind OpenIMSCore, with some fixes I wanted to make to their HSS, and ended up being granted commit access to their repository. I've now made those fixes and wanted to distribute them more widely, so I've set up a PPA and made the Fraunhofer Home Subscriber Server (FHoSS) available as a Ubuntu 12.04 LTS package. (It should be trivial to build and install it for other Ubuntu systems, too, but 12.04 seemed like the best one to start with).
 

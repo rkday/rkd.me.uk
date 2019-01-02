@@ -1,9 +1,9 @@
-Title: Learning Rust
-Date: 2017-11-04 22:28:00
-Category: Code
-Tags: rust
-Slug: learning-rust
-Author: Rob Day
+---
+layout: default.liquid
+title: Learning Rust
+published_date: 2017-11-04 22:28:00 +0100
+slug: learning-rust
+---
 
 I've been learning [Rust](https://www.rust-lang.org) recently, and it's the first new language (with new concepts, like borrowing) I've learnt for a while - probably the first since Clojure in 2013. I thought it was worth writing up exactly what I'm doing to learn it, in the hopes that it's useful for others learning Rust and new programming languages in general.
 

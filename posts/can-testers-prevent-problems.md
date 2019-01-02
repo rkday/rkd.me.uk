@@ -1,8 +1,9 @@
-Title: Can testers prevent problems?
-Date: 2017-09-25 14:59
-Category: None
-Author: Rob Day
-Slug: can-testers-prevent-problems
+---
+layout: default.liquid
+title: Can testers prevent problems?
+published_date: 2017-09-25 14:59:00 +0100
+slug: can-testers-prevent-problems
+---
 
 I read recently that testers can't prevent problems, with the specific example that if a tester found an issue while reviewing a design or prototype before any code had been written, the mistake had still been made and caught by testing. I thought that in one sense this was pretty close to being true, and that in another sense it was completely wrong.
 

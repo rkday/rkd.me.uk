@@ -1,4 +1,7 @@
-Title: About me
+---
+title: About me
+layout: default.liquid
+---
 
 Hi! I'm Rob, a software developer working in London. This is my personal website.
 

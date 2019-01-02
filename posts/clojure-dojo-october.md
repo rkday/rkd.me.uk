@@ -1,9 +1,9 @@
-Title: London Clojurians - October 2013 Clojure Dojo
-Date: 2013-10-30 19:50
-Category: Code
-Tags: clojure
-Slug: oct-clojure
-Author: Rob Day
+---
+layout: default.liquid
+title: London Clojurians - October 2013 Clojure Dojo
+published_date: 2013-10-30 19:50:00 +0100
+slug: oct-clojure
+---
 
 I was at the London Clojure Dojo last night, and worked on
 [4clojure problem #146](http://www.4clojure.com/problem/146). I'm not

@@ -1,4 +1,7 @@
-Title: Technical projects
+---
+title: Technical projects
+layout: default.liquid
+---
 
 I'm involved in a wide variety of open-source projects, either personal ones, through work, or contributions to larger projects. This page lists a selection of them by language.
 
