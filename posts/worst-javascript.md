@@ -1,4 +1,5 @@
 ---
+layout: default.liquid
 title: The most terrifying Javascript I've seen yet...
 published_date: 2013-10-11 10:50:00 +0100
 slug: batman-js

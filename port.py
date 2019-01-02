@@ -15,6 +15,7 @@ conversions = {
 with open(oldfile) as oldf:
     with open(newfile, "w") as newf:
         newf.write("---\n")
+        newf.write("layout: default.liquid\n")
         for l in oldf.readlines():
             if inheaders:
                 newversion = None
