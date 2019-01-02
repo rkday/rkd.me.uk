@@ -11,7 +11,7 @@ I've been looking for a small project to work on to practice Rust, and here I ha
 
 Here's a screenshot:
 
-![Screenshot](/static/podcasts_screenshot.png)
+![Screenshot](/static/images/podcasts_screenshot.png)
 
 Currently, it can:
 

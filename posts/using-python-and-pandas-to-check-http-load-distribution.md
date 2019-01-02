@@ -70,7 +70,7 @@ def display_graph(time_series):
 
 which produces this graph:
 
-![](/static/pandas-graph1.png)
+![](/static/images/pandas-graph1.png)
 
 If we want a more methodical approach than just eyeballing the graph, Pandas maskes it easy to do [outlier detection](https://en.wikipedia.org/wiki/Outlier#Detection) - here, I'm using Tukey's range test, and printing out any data which it views as 'far out'.
 
@@ -113,6 +113,6 @@ which produces the following output, showing that 7,000+ 50ms time windows have 
 14       1
 ```
 
-![](/static/pandas-graph2.png)
+![](/static/images/pandas-graph2.png)
 
 I've put the code from this post on Github, at <https://github.com/rkday/pandas-clustering-analysis>.

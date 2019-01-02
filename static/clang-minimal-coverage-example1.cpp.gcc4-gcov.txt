@@ -1,0 +1,40 @@
+        -:    0:Source:clang-minimal-coverage-example1.cpp
+        -:    0:Graph:clang-minimal-coverage-example1.gcno
+        -:    0:Data:clang-minimal-coverage-example1.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include <vector>
+        -:    2:#include <string>
+        -:    3:
+        2:    4:class Foo
+        -:    5:{
+        -:    6:public:
+        -:    7:  int xyz();
+        -:    8:  std::vector<std::string> replicas = {"10.0.0.2", "10.0.0.1"};
+        -:    9:};
+        -:   10:
+        1:   11:int Foo::xyz()
+        -:   12:{
+        1:   13:  std::string my_ip = "10.0.0.2";
+        1:   14:  int index = 0;
+        3:   15:  for (std::vector<std::string>::iterator it = replicas.begin();
+        2:   16:                                          it != replicas.end();
+        -:   17:                                          ++it, ++index)
+        -:   18:  {
+        1:   19:    if (*it == my_ip)
+        -:   20:    {
+        1:   21:      break;
+        -:   22:    }
+        -:   23:  }
+        -:   24:
+        1:   25:  return 0;
+        -:   26:}
+        -:   27:
+        1:   28:int main()
+        -:   29:{
+        1:   30:  Foo y;
+        1:   31:  y.xyz();
+        -:   32:
+        1:   33:  return 0;
+        -:   34:}
+        -:   35:
