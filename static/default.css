@@ -9,7 +9,7 @@ body
 	margin: 0px;
 	padding: 0px;
 	background: #FFFFFF url(images/bg01.png) repeat;
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 12pt;
 	font-weight: 300;
 	color: #363636;
@@ -134,7 +134,7 @@ hr
 	{
 		display: inline-block;
 		font-size: 2.5em;
-		text-transform: uppercase;
+		font-style: italic;
 		font-weight: 700;
 		color: #FFF;
 	}
@@ -382,7 +382,6 @@ hr
 
 	.title h2
 	{
-		letter-spacing: 0.20em;
 		font-weight: 700;
 		font-size: 2em;
 		color: #171717;
