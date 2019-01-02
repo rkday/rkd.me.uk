@@ -1,0 +1,11 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - cobalt build
+artifacts:
+  files:
+    - '**/*'
+  discard-paths: no
+  base-directory: _site
