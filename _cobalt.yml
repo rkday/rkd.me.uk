@@ -1,3 +1,7 @@
+ignore:
+  - TODO
+  - buildspec.yml
+  - old_content
 
 site:
   title: cobalt blog
