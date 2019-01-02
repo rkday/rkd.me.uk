@@ -1,10 +1,9 @@
-Title: The most terrifying Javascript I've seen yet...
-Date: 2013-10-11 10:50
-Category: Code
-Tags: javascript, languages
-Slug: batman-js
-Author: Rob Day
-Summary: What happens in the land of extreme type coercion.
+---
+title: The most terrifying Javascript I've seen yet...
+published_date: 2013-10-11 10:50:00 +0100
+slug: batman-js
+excerpt: What happens in the land of extreme type coercion.
+---
 
 There was a recent discussion on the Clojure mailing list about
 dynamically and statically typed languages. Someone posted [this
