@@ -31,7 +31,7 @@ Released   : 20130623
 					<li><a href="/" accesskey="1" title="">Blog</a></li>
 					<li><a href="/pages/about.html" accesskey="2" title="">About Me</a></li>
 					<li><a href="/pages/projects.html" accesskey="3" title="">Projects</a></li>
-					<li><a href="/pages/links.html" accesskey="4" title="">Links</a></li>
+					<li><a href="/pages/resources.html" accesskey="4" title="">Resources</a></li>
 				</ul>
 			</div>
 		</div>
@@ -50,7 +50,7 @@ Released   : 20130623
 				</div>
 				<ul class="style2">
 {% for post in collections.posts.pages limit:10 %}
-<li><a href="{{post.permalink}}">{{post.title}}</a></li>
+<li><a href="/{{post.permalink}}">{{post.title}}</a></li>
 {% endfor %}
 				</ul>
 			</div>
