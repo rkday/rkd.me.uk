@@ -15,11 +15,19 @@ Then, tweak it so that it's a template:
 {% raw %}
 - the title of your page is `{{ page.title }}` - I have this as the HTML page title and as a `<h1>` on each page
 - the content is `{{ page.content }}`
+- I want a date on the pages where it makes sense (like blog posts), but not other pages (like the homepage), which I achieve with:
+
+```
+{% if page contains "published_date" %}
+<h3>{{ page.published_date | date: "%B %e, %Y" }}</h3>
+{% endif %}
+```
+
 - in the sidebar, I want to list my 10 most recent posts, with:
 
 ```
 {% for post in collections.posts.pages limit:10 %}
-<li><a href="/{{post.permalink}}">{{post.title}}</a></li>
+<li><a href="/{{post.permalink}}">{{post.title}}</a> ({{ post.published_date | date: "%B %e, %Y" }})</li>
 {% endfor %}
 ```
 {% endraw %}

@@ -53,7 +53,7 @@ Released   : 20130623
 				</div>
 				<ul class="style2">
 {% for post in collections.posts.pages limit:10 %}
-<li><a href="/{{post.permalink}}">{{post.title}}</a></li>
+<li><a href="/{{post.permalink}}">{{post.title}}</a> ({{ post.published_date | date: "%B %e, %Y" }})</li>
 {% endfor %}
 				</ul>
 			</div>
