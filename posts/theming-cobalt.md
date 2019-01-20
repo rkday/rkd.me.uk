@@ -12,8 +12,8 @@ Once you've chosen a page, copy that into `_layouts/default.liquid` in your Coba
 
 Then, tweak it so that it's a template:
 
-- the title of your page is `{{ page.title }}` - I have this as the HTML page title and as a `<h1>` on each page
-- the content is `{{ page.content }}`
+- the title of your page is `\{\{ page.title \}\}` - I have this as the HTML page title and as a `<h1>` on each page
+- the content is `\{\{ page.content \}\}`
 - in the sidebar, I want to list my 10 most recent posts, with:
 
 ```
