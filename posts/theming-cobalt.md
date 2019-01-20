@@ -1,8 +1,9 @@
 ---
 title: Theming Cobalt
+published_date: "2019-01-20 18:26:18 +0000"
 layout: default.liquid
+is_draft: false
 ---
-
 When I switched from Pelican to Cobalt as my static site generator this year, one of the trickiest things was theming the site. Cobalt doesn't (yet) have anything like <https://github.com/getpelican/pelican-themes>, so you need to roll your own theme, and I thought I'd write up some notes on how.
 
 First, find a base HTML page. <https://templated.co/> has hundreds, all under a Creative Commons license - I hunted for one that looked nice and had a two-column layout (with a thin sidebar and some main content).
