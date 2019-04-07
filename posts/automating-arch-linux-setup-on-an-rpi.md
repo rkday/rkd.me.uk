@@ -28,7 +28,7 @@ popd
 umount root boot
 ```
 
-Once the base system is in place, though, there are more setup commands I want to run. Because my laptop is x86_64 and the Pi is ARM, the Pi binaries won't run on my laptop, so I can't just chroot into the install. However, the Linux kernel has a concept of 'binfmt support', effectively 'use this program to run this sort of binary'. This means that I can install qemu-user-static, and it will seamlessly emulate an ARM system when running ARM binaries.
+Once the base system is in place, though, there are more setup commands I want to run. Because my laptop is x86_64 and the Pi is ARM, the Pi binaries won't run on my laptop, so I can't just chroot into the install. However, the Linux kernel has a concept of 'binfmt support', effectively 'use this program to run this sort of binary'. This means that I can install `qemu-user-static`, and it will seamlessly emulate an ARM system when running ARM binaries.
 
 On Arch, using `yay` to access AUR packages, that's done like this:
 
@@ -101,7 +101,7 @@ umount root
 
 Some references:
 
-[The Wikipedia page on binfmt_misc](https://en.wikipedia.org/wiki/Binfmt_misc)
-[The Arch Linux RPi instructions](https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-3)
-The AUR pages for [qemu-user-static](https://aur.archlinux.org/packages/qemu-user-static/) and [binfmt-support](https://aur-dev.archlinux.org/packages/binfmt-support/?comments=all)
-The [Stack Exchange answer](https://unix.stackexchange.com/questions/41889/how-can-i-chroot-into-a-filesystem-with-a-different-architechture) that pointed me towards qemu-user-static
+- [The Wikipedia page on binfmt_misc](https://en.wikipedia.org/wiki/Binfmt_misc)
+- [The Arch Linux RPi instructions](https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-3)
+- The AUR pages for [qemu-user-static](https://aur.archlinux.org/packages/qemu-user-static/) and [binfmt-support](https://aur-dev.archlinux.org/packages/binfmt-support/?comments=all)
+- The [Stack Exchange answer](https://unix.stackexchange.com/questions/41889/how-can-i-chroot-into-a-filesystem-with-a-different-architechture) that pointed me towards qemu-user-static
