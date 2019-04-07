@@ -1,8 +1,9 @@
 ---
 title: Automating Arch Linux setup on an RPi
+published_date: "2019-04-07 17:31:19 +0000"
 layout: default.liquid
+is_draft: false
 ---
-
 I bought a Raspberry Pi 3 recently, and installed Arch Linux, in order to have a small, cheap, home server. For various reasons (e.g. plugging in USB devices with too much power draw, causing corrupted SD card writes) I keep having to reinstall it, so I've put together some scripts to make it simple.
 
 Installing the base system, by putting together a script from <https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-3>, is fairly straightforward. I jus plug the microSD card into my laptop and run:
