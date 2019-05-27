@@ -1,5 +1,5 @@
 ---
-title: Code navigation
+title: Code navigation with fzf/vim/ctags/ripgrep
 published_date: "2019-05-27 20:25:23 +0000"
 layout: default.liquid
 is_draft: false
