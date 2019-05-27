@@ -26,7 +26,7 @@ function rgv() { vim -c "silent grep $1" -c "copen"; }
 
 This runs a ripgrep search, then launches Vim with the results in a quickfix window I can navigate:
 
-![Demo of the rgv command](/static/rgv.gif)
+![Demo of the rgv command](/static/rgv-small.gif)
 
 I also have a slightly less good alternative where I run:
 
@@ -49,7 +49,7 @@ alias t='vim -t "$(cut -f1 tags | tail +7 | uniq | fzf)"'
 
 where `cut -f1 tags | tail +7 | uniq` extracts the tag names from the `tags` file, `fzf` is a fuzzy-finder that lets me search them, and `vim -t TAG` opens vim at a particular tag. 
 
-![Demo of the t command](/static/t.gif)
+![Demo of the t command](/static/t-small.gif)
 
 ## Keeping tag files up-to-date
 
