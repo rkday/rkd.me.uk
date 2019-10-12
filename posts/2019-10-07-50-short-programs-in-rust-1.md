@@ -2,6 +2,7 @@
 title: "50 short programs in Rust, #1"
 published_date: "2019-10-07 20:49:00 +0000"
 layout: default.liquid
+tags: ["50 short programs in Rust"]
 is_draft: false
 ---
 I'm at the point where I can read and write Rust (well, with a fair bit of help from the compiler), but I don't yet feel fluent in it and it doesn't feel completely natural. For example, I still reach for Python when I want to implement short programs to try out an idea.
