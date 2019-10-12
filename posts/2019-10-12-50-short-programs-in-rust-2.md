@@ -5,9 +5,14 @@ layout: default.liquid
 tags: ["50 short programs in Rust"]
 is_draft: false
 ---
-I use XFCE4 as my main window manager, and I like its flexibility/customisability. I recently found out about `xfce4-genmon-plugin`, which is a "generic monitor" - it runs any command on a configurable interval and includes the output on the XFCE panel. By having that command return XMl, it can even do quite flexible things with tooltips and images (see <https://goodies.xfce.org/projects/panel-plugins/xfce4-genmon-plugin#usage>).
+I use XFCE4 as my main window manager, and I like its flexibility/customisability. I recently found out about `xfce4-genmon-plugin`, which is a "generic monitor" - it runs any command on a configurable interval and includes the output on the XFCE panel. By having that command return XML, it can even display tooltips and images as well as plain text (see <https://goodies.xfce.org/projects/panel-plugins/xfce4-genmon-plugin#usage>).
 
-While most desktops include something that displays total CPU/RAM/etc. usage in the panel, I find it useful to also see what program is the heaviest user of each. Here's a Rust program (using [rust-psutil](https://github.com/borntyping/rust-psutil)) which runs for two seconds and prints out the program which used most CPU over those two seconds and had the highest memory usage at the end, and can then be hooked into `xfce4-genmon-plugin`:
+While most desktops include something that displays total CPU/RAM/etc. usage in the panel, I find it useful to also see what program is the heaviest user of each. Here's a Rust program (using [rust-psutil](https://github.com/borntyping/rust-psutil)) which runs for two seconds, then prints out:
+
+- the program which used most CPU over those two seconds,
+- and the program which had the highest memory usage at the end
+
+Since it's plain text on one line, it can then be easily hooked into `xfce4-genmon-plugin` and look OK.
 
 ```rust
 use std::collections::HashMap;
