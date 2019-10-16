@@ -23,12 +23,17 @@ $ python3 -c 'print(set("hello world")); print(set("hello world"));'
 The answer is in the [Python Language Reference](https://docs.python.org/3.8/reference/datamodel.html?highlight=data#object.__hash__):
 
 ```
-By default, the __hash__() values of str and bytes objects are “salted” with an unpredictable random value. Although they remain constant within an individual Python process, they are not predictable between repeated invocations of Python.
+By default, the __hash__() values of str and bytes objects are “salted” with an
+unpredictable random value. Although they remain constant within an individual
+Python process, they are not predictable between repeated invocations of Python.
 
-This is intended to provide protection against a denial-of-service caused by carefully-chosen inputs that exploit the worst case performance of a dict insertion, O(n^2) complexity. See http://www.ocert.org/advisories/ocert-2011-003.html for details.
+This is intended to provide protection against a denial-of-service caused by
+carefully-chosen inputs that exploit the worst case performance of a dict
+insertion, O(n^2) complexity.
+See http://www.ocert.org/advisories/ocert-2011-003.html for details.
 ```
 
-I wanted to illustrate the kind of attack they describe, so I wrote a short program - initially in Python, but per the theme of these blog posts, I then ported it to Rust.
+I wanted to illustrate the kind of attack they describe (which has a lot more detail at <https://www.cs.auckland.ac.nz/~mcw/Teaching/refs/misc/denial-of-service.pdf>), so I wrote a short program - initially in Python, but per the theme of these blog posts, I then ported it to Rust.
 
 ```rust
 use bencher::Bencher;
@@ -173,7 +178,33 @@ bad = time_it(BadHashable, 1000)
 bad2 = time_it(BadHashable, 4000)
 
 good2 = time_it(GoodHashable, 4000)
-print("Normal case took {} ms, worst case {} ms, {}x difference".format(good * 1000, bad * 1000, bad/good))
+print("Normal case took {} ms, worst case {} ms, {}x difference".format(
+          good * 1000, bad * 1000, bad/good))
 print("Bad case took {}x longer with 4x more input".format(bad2/bad))
 print("Normal case took {}x longer with 4x more input".format(good2/good))
+```
+
+P.S. I also wrote a short program to check that Rust protects against this attack in the same way as Python, and it does:
+
+```rust
+use std::collections::HashSet;
+
+fn main() {
+    let mut hs = HashSet::new();
+    hs.insert("shinji");
+    hs.insert("asuka");
+    hs.insert("rei");
+    hs.insert("misato");
+    hs.insert("ritsuko");
+    println!("{:?}", hs);
+}
+```
+
+```
+$ ./target/debug/hash_speed_demo                                                  
+{"rei", "ritsuko", "shinji", "asuka", "misato"}
+$ ./target/debug/hash_speed_demo
+{"shinji", "misato", "asuka", "rei", "ritsuko"}
+$ ./target/debug/hash_speed_demo
+{"misato", "shinji", "ritsuko", "rei", "asuka"}
 ```
