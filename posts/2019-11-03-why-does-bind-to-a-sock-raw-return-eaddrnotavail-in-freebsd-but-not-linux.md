@@ -9,11 +9,11 @@ I tracked down an interesting bug this weekend - a SIPp user [reported](https://
 `truss` (which is basically `strace` for FreeBSD) showed the underlying error:
 
 ```
-  756: socket(PF_INET,SOCK_RAW,IPPROTO_UDP)  = 7 (0x7)
-  756: bind(7,{ AF_INET 127.0.0.1:14000 },16)  ERR#49 'Can't assign requested address'
+socket(PF_INET,SOCK_RAW,IPPROTO_UDP)  = 7 (0x7)
+bind(7,{ AF_INET 127.0.0.1:14000 },16)  ERR#49 'Can't assign requested address'
 ```
 
-127.0.0.1 definitely exists, so what's the problem? Turns out it was the port - when binding a raw socket, you're doing so at the IP level rather than the transport level, so the port is meaningless. It looks like on FreeBSD, as opposed to Linux, supplying a port here is atively forbidden.
+127.0.0.1 definitely exists, so what's the problem? Turns out it was the port - when binding a raw socket, you're doing so at the IP level rather than the transport level, so the port is meaningless. It looks like on FreeBSD, as opposed to Linux, supplying a port here is actively forbidden.
 
 The [Linux IP manual page](http://man7.org/linux/man-pages/man7/ip.7.html) comes closest to suggesting this, when it says "Note that the raw IPv4 protocol as such has no concept of a port, they are implemented only by higher protocols like tcp(7) and udp(7)", but the FreeBSD docs on [ip](https://www.freebsd.org/cgi/man.cgi?query=ip&apropos=0&sektion=4&manpath=FreeBSD+11.2-RELEASE&arch=default&format=html), [inet](https://www.freebsd.org/cgi/man.cgi?query=inet&apropos=0&sektion=4&manpath=FreeBSD+11.2-RELEASE&arch=default&format=html) and [bind](https://www.freebsd.org/cgi/man.cgi?query=bind&apropos=0&sektion=2&manpath=FreeBSD+11.2-RELEASE&arch=default&format=html) don't mention this or that `EADDRNOTAVAIL` might be caused by this.
 
@@ -38,7 +38,8 @@ int main() {
   printf("IP: %s\n", inet_ntoa((((struct sockaddr_in*)&addr)->sin_addr)));
   int rc = 0;
   rc = bind(s, (struct sockaddr*)&addr, sizeof(struct sockaddr_in));
-  printf("Bind result on socket %d: %d / %d / %s\n", s, rc, errno, strerror(errno));
+  printf("Bind result on socket %d: %d / %d / %s\n",
+         s, rc, errno, strerror(errno));
 ```
 
 On Linux:
@@ -59,6 +60,8 @@ Bind result on socket 3: 0 / 0 / Success
 On FreeBSD:
 
 ```
+root@freebsd:~/sipp # uname -a
+FreeBSD freebsd 11.2-RELEASE FreeBSD 11.2-RELEASE #0 r335510: Fri Jun 22 04:32:14 UTC 2018     root@releng2.nyi.freebsd.org:/usr/obj/usr/src/sys/GENERIC  amd64
 root@freebsd:~/sipp # gcc -o rawbind rawbind.c -DPORT=15000
 root@freebsd:~/sipp # ./rawbind 
 IP: 127.0.0.1
