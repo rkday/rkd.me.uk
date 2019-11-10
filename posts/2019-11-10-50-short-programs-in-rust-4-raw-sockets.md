@@ -1,6 +1,6 @@
 ---
 title: "50 short programs in Rust, #4 - raw sockets"
-published_date: "2019-11-03 22:16:08 +0000"
+published_date: "2019-11-10 22:11:29 +0000"
 layout: default.liquid
 is_draft: false
 ---
