@@ -4,7 +4,9 @@ published_date: "2019-11-03 22:16:08 +0000"
 layout: default.liquid
 is_draft: false
 ---
-In my last post, I showed a short C program I'd written to test `bind()` behaviour with `SOCK_RAW` sockets. I thought I'd try porting it into Rust:
+_(I'm writing 50 short programs in Rust, often ones I would normally write in Python, to improve my fluency - starting [here](http://rkd.me.uk/posts/2019-10-07-50-short-programs-in-rust-1.html))._
+
+In [my last post](http://rkd.me.uk/posts/2019-11-03-why-does-bind-to-a-sock-raw-return-eaddrnotavail-in-freebsd-but-not-linux.html), I showed a short C program I'd written to test `bind()` behaviour with `SOCK_RAW` sockets. I thought I'd try porting it into Rust:
 
 ```
 use nix::sys::socket::*;
