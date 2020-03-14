@@ -63,14 +63,15 @@ fn main() -> std::io::Result<()> {
 And here it is in action:
 
 ```
-$ ./target/debug/symlink ~/.local/bin/code --pointing-to ~/.local/VSCode-linux-x64/bin/code
+$ symlink ~/.local/bin/code --pointing-to ~/.local/VSCode-linux-x64/bin/code
 
 $ ls -l ~/.local/bin/code 
-lrwxrwxrwx 1 rkd rkd 42 Mar 14 17:25 /home/rkd/.local/bin/code -> /home/rkd/.local/VSCode-linux-x64/bin/code
+lrwxrwxrwx 1 rkd rkd 42 Mar 14 17:25 /home/rkd/.local/bin/code ->
+                                    /home/rkd/.local/VSCode-linux-x64/bin/code
 
-$ ./target/debug/symlink ~/.local/bin/code --pointing-to ~/.local/VSCode-linux-x64/bin/code
+$ symlink ~/.local/bin/code --pointing-to ~/.local/VSCode-linux-x64/bin/code
 Error: Custom { kind: Other, error: "/home/rkd/.local/bin/code already exists" }
 
-$ ./target/debug/symlink ~/.local/bin/code2 --pointing-to ~/.local/VSCode-linux-x64/bin/cod
-Error: Custom { kind: Other, error: "/home/rkd/.local/VSCode-linux-x64/bin/cod does not exist" }
+$ symlink ~/.local/bin/code2 --pointing-to ~/VSCode/bin/cod
+Error: Custom { kind: Other, error: "/home/rkd/VSCode/bin/cod does not exist" }
 ```
