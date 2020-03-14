@@ -63,3 +63,18 @@ fn main() -> std::io::Result<()> {
     }
 }
 ```
+
+and here it is in action:
+
+```
+$ symlink ~/.local/bin/code --pointing-to ~/.local/VSCode-linux-x64/bin/code
+
+$ file ~/.local/bin/code
+/home/rkd/.local/bin/code: symbolic link to /home/rkd/.local/VSCode-linux-x64/bin/code
+
+$ symlink ~/.local/bin/code --pointing-to ~/.local/VSCode-linux-x64/bin/code 
+Error: Custom { kind: AlreadyExists, error: "/home/rkd/.local/bin/code already exists" }
+
+$ symlink ~/.local/bin/code3 --pointing-to /nowhere                         
+Error: Custom { kind: NotFound, error: "/nowhere does not exist" }
+```
