@@ -251,7 +251,7 @@ hr
 {
 	overflow: hidden;
 	height: 300px;
-	background: url('images/header.jpg') no-repeat top center;
+	background: url('images/header2.jpg') no-repeat top center;
 	background-size: 100%;
 }
 
@@ -460,7 +460,9 @@ hr
 		margin-top: 2.2em;
 	}
 
-
+pre {
+  overflow-x: auto
+}
 
 
 
