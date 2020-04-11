@@ -8,7 +8,7 @@ I hit some stack corruption bugs recently, and have been looking at tools to deb
 
 First, what is a stack? Here's a program that prints out its own stack:
 
-```
+```cpp
 $ cat show_the_stack.cpp 
 #include <stdio.h>
 #include <stdint.h>
@@ -138,7 +138,7 @@ My other usual go-to for debugging memory issues, valgrind, also doesn't work ve
 
 Clang and GCC have the ability to check canary values on the stack, and complain if they've been overwritten. This is enabled with `-fstack-protector`, or `-fstack-protector-all` to apply it to more functions.
 
-```
+```cpp
 $ cat corruption1.cpp                                      
 #include <stdio.h>
 #include <stdint.h>
@@ -215,7 +215,7 @@ Program received signal SIGABRT, Aborted.
 
 The stack protector can catch invalid writes, but not reads. This program reads off the end of an array, including things it's not meant to:
 
-```
+```cpp
 $ cat corruption2.cpp 
 #include <stdio.h>
 #include <stdint.h>
@@ -418,7 +418,7 @@ However, this just mitigates the effect of stack corruption - it doesn't help me
 
 The following program resists all those techniques:
 
-```
+```cpp
 $ cat corruption3.cpp 
 #include <stdio.h>
 #include <stdint.h>
@@ -474,7 +474,7 @@ It corrupts the return address (causing the `never_called` function to be called
 
 In this case I had to write my own guard macros, saving off the return address at the start of the function and checking it later (and therefore catching corruption before we attempt to jump to that address and get a broken backtrace):
 
-```
+```cpp
 $ cat corruption_guard.cpp                            
 #include <stdio.h>
 #include <stdint.h>
