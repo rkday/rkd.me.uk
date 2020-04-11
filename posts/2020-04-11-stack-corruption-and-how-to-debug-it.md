@@ -6,7 +6,7 @@ is_draft: false
 ---
 I hit some stack corruption bugs recently, and have been looking at tools to debug/prevent them. Here's what I learnt!
 
-First, what is a stack? Here's a program that prints out its own stack:
+First, what is on the stack and where is it? Here's a program that prints out its own stack:
 
 ```cpp
 $ cat show_the_stack.cpp 
