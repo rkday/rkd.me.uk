@@ -79,7 +79,7 @@ int main() {
 
 and its output, lightly annotated:
 
-```
+```cpp
 $ ./show_the_stack                            
 Address of main(): 0x5614d6712350
 Address of myfunc(): 0x5614d6712170
@@ -120,7 +120,7 @@ This might also occur if I saved off a pointer to a variable on the stack, then 
 
 This can be particularly painful because corrupting the parent frame pointer and/or return address makes gdb struggle to give useful backtraces:
 
-```
+```cpp
 Program received signal SIGSEGV, Segmentation fault.
 0x0000000000000000 in ?? ()
 (gdb) bt
@@ -173,7 +173,7 @@ Here I corrupt the 64 bits just before the frame pointer (i.e. the '#13: 0x7ffd8
 
 This is detected at runtime:
 
-```
+```cpp
 $ ./corruption1                                                      
 *** stack smashing detected ***: terminated
 [1]    107717 abort (core dumped)  ./corruption1
@@ -250,7 +250,7 @@ int main() {
 
 AddressSanitizer (enabled with `-fsanitize=address` can catch this):
 
-```
+```cpp
 $ ./corruption2                                                   
 =================================================================
 ==108199==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7ffdc23eb1f0 at pc 0x55e4140a07e7 bp 0x7ffdc23eb1b0 sp 0x7ffdc23eb1a8
@@ -306,7 +306,7 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
 
 and, paired with gdb, it can pinpoint the line where corruption occurs:
 
-```
+```cpp
 $ gdb ./corruption2                                               
 GNU gdb (GDB) 9.1
 Copyright (C) 2020 Free Software Foundation, Inc.
@@ -397,7 +397,7 @@ Breakpoint 1, 0x00005555556331b0 in __sanitizer::Die() ()
 
 SafeStack defends against stack corruption by creating a separate 'safe' and 'unsafe' stack. If I compile my `show_the_stack` program with `-fsanitize=safe-stack`, I get:
 
-```
+```cpp
 $ clang++ -o show_the_stack -fsanitize=safe-stack -ggdb3 show_the_stack.cpp
 $ ./show_the_stack 
 Address of main(): 0x55597c85dc30
@@ -453,7 +453,7 @@ int main() {
 }
 ```
 
-```
+```cpp
 $ gdb ./corruption3
 (gdb) run
 Starting program: /home/rkd/src/stack_corruption/corruption3 
@@ -518,7 +518,7 @@ int main() {
 }
 ```
 
-```
+```cpp
 $ ./corruption_guard      
 corruption_guard: corruption_guard.cpp:26: int myfunc(uint64_t): Assertion `ra_start == __builtin_return_address(0)' failed.
 [1]    109310 abort (core dumped)  ./corruption_guard
