@@ -12,7 +12,7 @@ The code is at <https://github.com/rkday/50-short-programs-in-rust/tree/master/x
 
 Here's a screenshot:
 
-[!Game of Life screensaver](/static/images/game_of_life.png)
+![Game of Life screensaver](/static/images/game_of_life.png)
 
 The main lessons here were:
 
